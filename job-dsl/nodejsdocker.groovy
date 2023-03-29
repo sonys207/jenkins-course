@@ -16,7 +16,6 @@ job('NodeJS-Docker-example') {
         dockerBuildAndPublish {
             repositoryName('tonytest2021/docker-nodejs-demo')
             tag('${GIT_REVISION,length=9}')
-            dockerRegistryURL('https://registry.hub.docker.com/')
             registryCredentials('dockerhub')
             forcePull(false)
             forceTag(false)
