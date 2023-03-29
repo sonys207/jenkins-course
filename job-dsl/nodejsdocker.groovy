@@ -11,7 +11,6 @@ job('NodeJS-Docker-example') {
     wrappers {
         nodejs('nodejs19.8.1') // this is the name of the NodeJS installation in 
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
-        docker('docker')
     }
     steps {
         dockerBuildAndPublish {
