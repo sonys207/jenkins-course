@@ -2,10 +2,11 @@ node{
    def commit_id
    stage('Preparation') {
      checkout scm
+     sh 'echo 12345'  
      sh "git rev-parse --short HEAD > .git/commit-id"                        
      commit_id = readFile('.git/commit-id').trim()
    }
-   stage('test') {
+   stage('test2') {
      def myTestContainer = docker.image('node:16')
      myTestContainer.pull()
      myTestContainer.inside {
